@@ -1,0 +1,30 @@
+{
+  "name": "prospect-tmn",
+  "description": "marketing and brand development agency",
+  "main": "server.js",
+  "authors": [
+    "Roman Tuomisto"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "NODE",
+    "WEBSOCKET.IO",
+    "Mongoose",
+    "MongoDB",
+    "ExpressJS"
+  ],
+  "homepage": "https://www.prospecttmn.ru",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "^2.3.1",
+    "font-awesome": "^5.0.13"
+  }
+}

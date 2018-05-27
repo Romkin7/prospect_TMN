@@ -1,0 +1,56 @@
+{
+  "name": "prospect-tmn",
+  "version": "1.0.0",
+  "description": "marketing and brand development agency",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js",
+    "postinstall": "./node_modules/bower/bin/bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Romkin7/prospect_TMN.git"
+  },
+  "keywords": [
+    "NODE",
+    "WEBSOCKET.IO",
+    "Mongoose",
+    "MongoDB",
+    "ExpressJS"
+  ],
+  "author": "Roman Tuomisto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Romkin7/prospect_TMN/issues"
+  },
+  "homepage": "https://github.com/Romkin7/prospect_TMN#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bower": "^1.8.4",
+    "compression": "^1.7.2",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "csurf": "^1.9.0",
+    "ejs": "^2.6.1",
+    "ejs-mate": "^2.3.0",
+    "express": "^4.16.3",
+    "express-flash": "0.0.2",
+    "express-sanitizer": "^1.0.4",
+    "express-session": "^1.15.6",
+    "helmet": "^3.12.1",
+    "moment": "^2.22.1",
+    "mongoose": "^5.1.2",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1",
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-uglify": "^3.0.0",
+    "uglify-es": "^3.3.9"
+  }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.manifest">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115902522-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-115902522-1');
+  </script>
+  <!-- Meta data -->
+  <meta charset="utf-8">
+  <meta http-equiv="cache-control" content="max-age=2592" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Проспект | корпоративная и сувенирная продукция">
+  <meta name="author" content="Roman Tuomisto">
+  <!-- Title -->
+  <title>Проспект | корпоративная и сувенирная продукция</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0;URL=noJsErrorPage.html">
+  </noscript>
+
+  <!-- Theme CSS -->
+  <link href="css/agency.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!-- [if lt IE 9]
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  [endif] -->
+  <script type="text/javascript">
+      function onUpdateReady() {
+        if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+            window.applicationCache.swapCache();
+            location.reload();
+        }
+      }
+      window.applicationCache.addEventListener('updateready', onUpdateReady);
+  </script>
+</head>
+
+<body id="page-top" class="index" oncopy="return false" onpaste="return false" oncut="return false">
+
+  <!-- Navigation -->
+  <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <a class="navbar-brand brand2 mobile">
+          <img src="img/logos/prospect.png" alt="Проспект">
+        </a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navCollapsed">
+          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="col-md-10 col-md-offset-1">
+      <div class="collapse navbar-collapse" id="navCollapsed">
+        <ul class="nav navbar-nav navbar-left text-right">
+          <li><a class="page-scroll" href="#about">Кто мы</a></li>
+          <li><a class="page-scroll" href="#services">Что мы делаем</a></li>
+          <li><a class="page-scroll" href="#client">Нам доверяют</a></li>
+          <a href="#page-top" class="navbar-brand page-scroll desktop">
+            <img id="brandLogo" src="img/logos/prospect.png" alt="Проспект">
+          </a>
+          <li><a class="page-scroll" href="#ideas">Идеи для бренда</a></li>
+          <li><a class="page-scroll" href="#contact">Напишите нам</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <% include ./partials/header %>
+  <aside>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <% if(error && error.length > 0) { %>
+            <div class="alert alert-danger alert-dismissible fade in" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <p><%= error %></p>
+            </div>
+          <% } %>
+          <% if(success && success.length > 0) { %>
+            <div class="alert alert-success alert-dismissible fade in" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <p><%= success %></p>
+            </div>
+            <% } %>
+          <div id="error"></div>
+          <div id="success"></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <section>
+    <%- body -%>
+  </section>
+  <footer>
+    <% include ./partials/footer %>
+  </footer>
+      <!-- prevent images from beeing rightclicked on website. -->
+      <script type="text/javascript">
+        document.oncontextmenu = function(e) {
+          e = e || window.event;
+          if(/^img$/i.test((e.target || e.srcElement).nodeName)) return false;
+        };
+      </script>
+
+      <!-- Bootstrap Core JavaScript -->
+      <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="vendor/bootstrap/js/tooltip.js"></script>
+      <script type="text/javascript" src="vendor/bootstrap/js/popover.js"></script>
+      <script type="text/javascript">
+        $('[data-toggle="popover"]').popover({trigger: "hover"}).on("show.bs.popover", function(){ $(this).data("bs.popover").tip().css("max-width", "800px"); });
+      </script>
+
+      <script type="text/javascript">
+        $('[data-toggle="tooltip"]').tooltip({trigger: "manual"})
+      </script>
+
+      <!-- Plugin JavaScript -->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+      <script type="text/javascript" src="vendor/particles/particles.min.js"></script>
+      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+      <!-- Animations -->
+      <script type="text/javascript" src="vendor/greensock/tweenmax.min.js"></script>
+      <script type="text/javascript" src="vendor/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+      <script type="text/javascript" src="vendor/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+
+      <!-- MomentJs -->
+      <script type="text/javascript" src="vendor/momentjs/moment.js"></script>
+
+      <!-- Masonry & Imageloaded plugins -->
+      <script type="text/javascript" src="vendor/masonry/dist/masonry.pkgd.min.js"></script>
+      <script type="text/javascript" src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+      <!-- Theme JavaScript -->
+      <script type="text/javascript" src="js/map.js"></script>
+      <script type="text/javascript" src="js/particles-effect.js"></script>
+      <script type="text/javascript" src="js/masonry.js"></script>
+      <script type="text/javascript" src="js/onlainManagerValidation.js"></script>
+      <script src="js/agency.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script type="text/javascript" src="js/chat.js"></script>
+      <script type="text/javascript">
+        var docWidth = document.documentElement.offsetWidth;
+          [].forEach.call(
+            document.querySelectorAll('*'),
+            function(el) {
+              if (el.offsetWidth > docWidth) {
+              console.log(el);
+            }
+          });
+      </script>
+    </body>
+</html>
